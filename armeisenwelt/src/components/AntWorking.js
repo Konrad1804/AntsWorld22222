@@ -10,4 +10,15 @@ export default class AntWorking {
     this.x += this.speedX;
     this.y += this.speedY;
   }
+  setSpeed(newSpeedX, newSpeedY) {
+    this.speedX = newSpeedX;
+    this.speedY = newSpeedY;
+  }
+  stop() {
+    this.speedX = 0;
+    this.speedY = 0;
+  }
+  hasStopped() {
+    return this.speedX === 0 && this.speedY === 0;
+  }
 }
